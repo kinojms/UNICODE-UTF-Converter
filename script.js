@@ -25,9 +25,9 @@ function calculate() {
     const utf32 = character.codePointAt(0).toString(16).toUpperCase().padStart(8, '0');
 
     // Display results
-    document.getElementById('utf8Output').innerHTML = `<strong>UTF-8:</strong> ${utf8}`;
-    document.getElementById('utf16Output').innerHTML = `<strong>UTF-16:</strong> ${utf16}`;
-    document.getElementById('utf32Output').innerHTML = `<strong>UTF-32:</strong> ${utf32}`;
+    document.getElementById('utf8Output').innerHTML = `${utf8}`;
+    document.getElementById('utf16Output').innerHTML = `${utf16}`;
+    document.getElementById('utf32Output').innerHTML = `${utf32}`;
 }
 
 function downloadText() {
