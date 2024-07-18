@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNICODE Calculator</title>
+    <title>Unicode Online Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>UNICODE Calculator</h1>
-        <label for="unicodeInput">Enter Unicode Character or Escape Sequence:</label>
-        <input type="text" id="unicodeInput" placeholder="Enter Unicode or escape sequence here...">
-        
-        <button onclick="calculate()">Calculate</button>
-        
-        <div class="output">
-            <h2>Output:</h2>
-            <div id="output">
-                <p><strong>UTF-8:</strong> <span id="utf8Output"></span></p>
-                <p><strong>UTF-16:</strong> <span id="utf16Output"></span></p>
-                <p><strong>UTF-32:</strong> <span id="utf32Output"></span></p>
-            </div>
+        <h1>Unicode Online Calculator</h1>
+        <label for="unicodeInput">Enter Unicode character or code point (e.g., 'あ' or 'u0024'):</label>
+        <input type="text" id="unicodeInput" maxlength="1">
+        <button id="convertButton">Convert</button>
+        <div class="output" id="output">
+            <p id="utf8Output"></p>
+            <p id="utf16Output"></p>
+            <p id="utf32Output"></p>
+            <a id="downloadLink" class="download-btn" href="#" download="unicode_conversions.txt">Download Results</a>
         </div>
-
-        <a href="#" class="download-btn" onclick="downloadText()">Download Text</a>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
