@@ -1,30 +1,32 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('bg.jpg');
+    background-image: url('bg.jpg'); /* Replace 'background.jpg' with your image file path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
-    color: #555;
+    color: #007bff;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 input[type="text"], button {
@@ -51,10 +53,7 @@ button:hover {
 
 .output {
     margin-top: 20px;
-}
-
-.output p {
-    margin-bottom: 5px;
+    font-size: 16px;
 }
 
 .download-btn {
@@ -67,6 +66,7 @@ button:hover {
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .download-btn:hover {

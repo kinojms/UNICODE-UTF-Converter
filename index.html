@@ -8,15 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Unicode Online Calculator</h1>
+        <h1>UNICODE TO UTF ONLINE CONVERTER</h1>
         <label for="unicodeInput">Enter Unicode character or code point (e.g., 'あ' or 'u0024'):</label>
-        <input type="text" id="unicodeInput" maxlength="1">
-        <button id="convertButton">Convert</button>
+        <input type="text" id="unicodeInput">
+        <div class="button-container">
+            <button id="convertButton">Convert</button>
+            <a id="downloadLink" class="download-btn" href="#" download="unicode_to_utf.txt">Download Results</a>
+        </div>
         <div class="output" id="output">
             <p id="utf8Output"></p>
             <p id="utf16Output"></p>
             <p id="utf32Output"></p>
-            <a id="downloadLink" class="download-btn" href="#" download="unicode_conversions.txt">Download Results</a>
         </div>
     </div>
     <script src="script.js"></script>
