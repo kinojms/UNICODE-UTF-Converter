@@ -67,7 +67,12 @@ The tool accepts two types of inputs: a single character or a code point. Below 
 ## Analysis Write-Up
 
 ### Design and Development Process
-The design process began with identifying the key functionalities required: input of Unicode characters or code points, conversion to various UTF encodings, and display of results. The development was carried out using HTML, CSS, and JavaScript, focusing on creating a responsive and user-friendly interface.
+The design process began with identifying the key functionalities required: 
+- input of Unicode characters or code points
+- conversion to UTF-8, 16, 32 
+- display of results & downloadable as txt file
+
+The development was carried out using HTML, CSS, and JavaScript as it only requires a simple interface for Input & Outputs.
 
 ### Technical Details
 - Technologies Used: HTML, CSS, JavaScript
