@@ -17,11 +17,13 @@ document.getElementById('convertButton').addEventListener('click', () => {
  * @returns {string|null} - The character corresponding to the Unicode code point or the single character, or null if invalid.
  */
 function parseUnicodeInput(input) {
-    // checks for code point input (ex: u0024)
-    const codePoint = input.match(/^u([0-9a-fA-F]{4,6})$/);
+    // checks for code point input (ex: u0024 or u24)
+    const codePoint = input.match(/^u([0-9a-fA-F]{1,6})$/);
     if (codePoint) {
+        // pad the hex value to 4 or 6 digits
+        const hexValue = codePoint[1].padStart(4, '0');
         // converts hex to char
-        return String.fromCodePoint(parseInt(codePoint[1], 16));
+        return String.fromCodePoint(parseInt(hexValue, 16));
     }
     // if input is a single char for unicode char
     if (input.length === 1) {
@@ -30,6 +32,7 @@ function parseUnicodeInput(input) {
 
     return null; // if invalid input
 }
+
 
 /**
  * This function converts a Unicode character to its UTF-8, UTF-16, and UTF-32 encodings.

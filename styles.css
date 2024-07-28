@@ -19,6 +19,10 @@ body {
     border-radius: 10px;
 }
 
+.notice {
+    color: #ff000080
+}
+
 h1 {
     text-align: center;
     color: #ff000080;
