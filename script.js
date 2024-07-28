@@ -1,4 +1,3 @@
-// Event listener for Convert button; Executes displayEncodings and updateDownloadLink after press
 document.getElementById('convertButton').addEventListener('click', () => {
     const input = document.getElementById('unicodeInput').value.trim();
     const character = parseUnicodeInput(input);
@@ -13,23 +12,23 @@ document.getElementById('convertButton').addEventListener('click', () => {
 });
 
 /**
- * This function parses the input to determine if it is a Unicode code point (e.g., u0024) or a single character.
+ * This function parses the input to determine if it is a Unicode code point or a single character.
  * @param {string} input - The input string from the user.
  * @returns {string|null} - The character corresponding to the Unicode code point or the single character, or null if invalid.
  */
 function parseUnicodeInput(input) {
-    // Check if input is a Unicode code point (e.g., u0024 or u245D6)
+    // checks for code point input (ex: u0024)
     const codePoint = input.match(/^u([0-9a-fA-F]{4,6})$/);
     if (codePoint) {
-        // Convert the hex to char using fromCodePoint function
+        // converts hex to char
         return String.fromCodePoint(parseInt(codePoint[1], 16));
     }
-    // Input is a single character
+    // if input is a single char for unicode char
     if (input.length === 1) {
         return input;
     }
 
-    return null; // If invalid input
+    return null; // if invalid input
 }
 
 /**
@@ -38,21 +37,21 @@ function parseUnicodeInput(input) {
  * @returns {Object} - An object containing the UTF-8, UTF-16, and UTF-32 encodings.
  */
 function unicodeToUtf(character) {
-    // UTF-8 Encoding
+    // UTF-8 
     const utf8 = [...unescape(encodeURIComponent(character))].map(char => {
-        return ('0' + char.charCodeAt(0).toString(16)).slice(-2); // Convert each character to hex and splits into 2 digits
+        return ('0' + char.charCodeAt(0).toString(16)).slice(-2); // converts each character to hex and splits into 2 digits
     }).join(' ');
 
-    // UTF-16 Encoding
+    // UTF-16 
     const utf16 = character.split('').map(char => {
         const codeUnit = char.charCodeAt(0);
-        return ('0000' + codeUnit.toString(16)).slice(-4); // Convert each code unit to hex and splits into 4 digits
+        return ('0000' + codeUnit.toString(16)).slice(-4); // converts each code unit to hex and splits into 4 digits
     }).join(' ');
 
-    // UTF-32 Encoding
+    // UTF-32 
     const utf32 = ('00000000' + character.codePointAt(0).toString(16)).slice(-8); // 0 padding; Adds code unit to 00000000 and makes sure it has 8 digits
 
-    return { utf8, utf16, utf32 }; // Returns converted values from Unicode to UTF representations (in Hex)
+    return { utf8, utf16, utf32 }; // returns converted values
 }
 
 /**
