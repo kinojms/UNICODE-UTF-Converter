@@ -1,18 +1,19 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('bg.jpg'); /* Replace 'background.jpg' with your image file path */
+    background-image: url('bg.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+    background-color: #333;
     margin: 0;
     padding: 0;
     color: #333;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    max-width: 610px;
+    margin: 150px auto;
+    background-color: rgba(255, 255, 255, 0.75); /* Semi-transparent white background */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
@@ -20,7 +21,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #007bff;
+    color: #ff000080;
 }
 
 label {
@@ -40,7 +41,7 @@ input[type="text"], button {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #292c30;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -48,7 +49,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #bc8c8f;
 }
 
 .output {
@@ -58,9 +59,8 @@ button:hover {
 
 .download-btn {
     display: block;
-    width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #292c30;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -70,5 +70,5 @@ button:hover {
 }
 
 .download-btn:hover {
-    background-color: #218838;
+    background-color: #bc8c8f;
 }
