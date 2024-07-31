@@ -63,7 +63,7 @@ The tool accepts two types of inputs: a single character or a code point. Below 
 - updateDownloadLink: Updates the download link to allow users to download the results as a text file.
 
 ## Screenshots & Link to Video Demo
-Screenshots: For test case screenshots, download 'CSARCH2 Test Cases.pdf'
+Screenshots: For test case screenshots, download 'CSARCH2 Test Cases.pdf' <br>
 Video Demo: 
 
 ## Analysis Write-Up
