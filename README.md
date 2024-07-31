@@ -64,7 +64,7 @@ The tool accepts two types of inputs: a single character or a code point. Below 
 
 ## Screenshots & Link to Video Demo
 Screenshots: For test case screenshots, download 'CSARCH2 Test Cases.pdf' <br>
-Video Demo: 
+Video Demo: To be added
 
 ## Analysis Write-Up
 
